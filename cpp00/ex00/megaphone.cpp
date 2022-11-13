@@ -1,4 +1,4 @@
-/* Copyright © 2022 Matheus Oliveira, maolivei A.K.A araggohnxd */
+/* Copyright (c) 2022 Matheus Oliveira, maolivei A.K.A araggohnxd */
 
 #include <iostream>
 
