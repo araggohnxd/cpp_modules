@@ -6,8 +6,10 @@ int main(int argc, char **argv)
 {
     std::string str;
 
-    if (argc == 1)
-        str = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+    if (argc == 1) {
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+        return (0);
+    }
     for (size_t i = 1; i < argc; ++i)
         str.append(argv[i]);
     for (std::string::iterator c = str.begin(); c != str.end(); ++c)
