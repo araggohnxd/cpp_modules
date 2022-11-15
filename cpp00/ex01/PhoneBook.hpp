@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:03:14 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/15 14:55:30 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:23:12 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ class PhoneBook {
         std::string _trunc(std::string str);
 
         Contact _contacts[MAX_CONTACTS];
-        size_t  _total_contacts;
-        size_t  _current_index;
+        size_t  _total_contacts, _current_index;
 };
 
 #endif /* PHONEBOOK_HPP */
