@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:05:14 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/15 16:43:40 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/15 19:05:03 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void PhoneBook::prompt_search(void)
     int         int_index;
 
     if (this->_total_contacts == 0) {
-        std::cout << "There are no contacts to search for!" << std::endl;
+        std::cout << "There are no contacts to search for!\n" << std::endl;
         return;
     }
     std::cout << SEPARATOR << std::endl;
