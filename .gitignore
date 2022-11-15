@@ -34,6 +34,7 @@
 # Custom files
 .clang-format
 megaphone
+phonebook
 
 # Custom directories
 .vscode/
