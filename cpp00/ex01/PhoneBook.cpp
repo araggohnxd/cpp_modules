@@ -6,17 +6,13 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:05:14 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/15 15:00:57 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:43:40 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <PhoneBook.hpp>
 
-PhoneBook::PhoneBook(void)
-{
-    this->_total_contacts = 0;
-    this->_current_index  = 0;
-}
+PhoneBook::PhoneBook(void) : _total_contacts(0), _current_index(0) {}
 
 PhoneBook::~PhoneBook(void) {}
 
