@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:00:43 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/15 14:44:35 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/15 19:02:31 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ void Contact::set_secret(const std::string str) { this->_secret = str; }
 
 void Contact::set_phone(const std::string str) { this->_phone = str; }
 
-std::string Contact::get_firstname(void) { return (this->_firstname); }
+std::string Contact::get_firstname(void) const { return (this->_firstname); }
 
-std::string Contact::get_lastname(void) { return (this->_lastname); }
+std::string Contact::get_lastname(void) const { return (this->_lastname); }
 
-std::string Contact::get_nickname(void) { return (this->_nickname); }
+std::string Contact::get_nickname(void) const { return (this->_nickname); }
 
-std::string Contact::get_secret(void) { return (this->_secret); }
+std::string Contact::get_secret(void) const { return (this->_secret); }
 
-std::string Contact::get_phone(void) { return (this->_phone); }
+std::string Contact::get_phone(void) const { return (this->_phone); }
