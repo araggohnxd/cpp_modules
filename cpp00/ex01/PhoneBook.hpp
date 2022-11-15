@@ -6,22 +6,23 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:03:14 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/15 18:23:12 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:43:31 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#include <Contact.hpp>
-#include <iomanip> // setw, right
-#include <iostream> // cin, cout, cerr
-#include <stdlib.h> // atoi
+#include <Contact.hpp> /* Contact class */
+#include <iomanip>     /* setw, right */
+#include <iostream>    /* cin, cout, cerr */
+#include <stdlib.h>    /* atoi */
+#include <string>      /* string class */
 
 #define MAX_CONTACTS 8
-#define MAX_FIELDS 5
-#define SEPARATOR " +---------------------------------------------------+"
-#define PIPE " | "
+#define MAX_FIELDS   5
+#define SEPARATOR    " +---------------------------------------------------+"
+#define PIPE         " | "
 
 class PhoneBook {
     public:

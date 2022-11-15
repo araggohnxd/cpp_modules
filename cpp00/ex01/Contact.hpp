@@ -6,15 +6,14 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 20:39:38 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/15 14:44:31 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:43:33 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-#include <iostream>
-#include <string>
+#include <string> /* string class */
 
 class Contact {
     public:
