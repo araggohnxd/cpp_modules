@@ -32,11 +32,16 @@
 *.app
 
 # Custom files
+
+# cpp00
 .clang-format
 megaphone
 phonebook
 19920104_091532.log
 gbu
+
+# cpp01
+zombie
 
 # Custom directories
 .vscode/
