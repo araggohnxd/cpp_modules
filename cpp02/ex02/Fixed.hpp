@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 20:33:19 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/17 14:59:08 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/17 18:48:21 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ class Fixed {
         Fixed  operator*(Fixed const &rhs);
         Fixed  operator/(Fixed const &rhs);
 
-        Fixed &operator++(void);
-        Fixed  operator++(int);
-        Fixed &operator--(void);
-        Fixed  operator--(int);
+        Fixed &operator++(void); /* prefixed */
+        Fixed  operator++(int);  /* postfixed */
+        Fixed &operator--(void); /* prefixed */
+        Fixed  operator--(int);  /* postfixed */
 
         static Fixed       &min(Fixed &lhs, Fixed &rhs);
         static const Fixed &min(Fixed const &lhs, Fixed const &rhs);
@@ -59,6 +59,6 @@ class Fixed {
         static const int _fractionalBits;
 };
 
-std::ostream &operator<<(std::ostream &o, Fixed const &rhs);
+std::ostream &operator<<(std::ostream &o, Fixed const &i);
 
 #endif /* FIXED_H */

@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 20:33:19 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/17 18:32:31 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/17 18:48:25 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,6 @@ class Fixed {
         static const int _fractionalBits;
 };
 
-std::ostream &operator<<(std::ostream &o, Fixed const &rhs);
+std::ostream &operator<<(std::ostream &o, Fixed const &i);
 
 #endif /* FIXED_H */
