@@ -50,6 +50,7 @@ harlFilter
 
 # cpp02
 fixed
+bsp
 
 # Custom directories
 .vscode/
