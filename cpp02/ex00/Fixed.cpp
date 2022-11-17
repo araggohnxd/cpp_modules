@@ -6,13 +6,17 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 20:33:12 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/17 12:03:18 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:02:49 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 const int Fixed::_fractionalBits = 8;
+
+/*
+** ------------------------------- CONSTRUCTOR --------------------------------
+*/
 
 Fixed::Fixed() : _rawBits(0)
 {
@@ -25,7 +29,15 @@ Fixed::Fixed(const Fixed &src)
     *this = src;
 }
 
+/*
+** -------------------------------- DESTRUCTOR --------------------------------
+*/
+
 Fixed::~Fixed() { std::cout << "Destructor called" << std::endl; }
+
+/*
+** --------------------------------- OVERLOAD ---------------------------------
+*/
 
 Fixed &Fixed::operator=(Fixed const &rhs)
 {
@@ -33,6 +45,10 @@ Fixed &Fixed::operator=(Fixed const &rhs)
     this->_rawBits = (rhs.getRawBits());
     return (*this);
 }
+
+/*
+** --------------------------------- ACCESSOR ---------------------------------
+*/
 
 int Fixed::getRawBits(void) const
 {
