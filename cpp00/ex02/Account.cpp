@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 19:45:04 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/15 21:23:21 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/17 11:51:30 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,11 @@ void Account::displayAccountsInfos(void)
 void Account::_displayTimestamp(void)
 {
     struct tm *time_struct;
-    time_t     curret_time;
+    time_t     current_time;
     char       buffer[20];
 
-    curret_time = time(0);
-    time_struct = localtime(&curret_time);
+    current_time = time(0);
+    time_struct  = localtime(&current_time);
     strftime(buffer, sizeof(buffer), "[%Y%m%d_%I%M%S] ", time_struct);
     std::cout << buffer;
 }
