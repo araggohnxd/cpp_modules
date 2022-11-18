@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 11:57:17 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/18 16:05:04 by maolivei         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:08:41 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,12 @@ DiamondTrap::~DiamondTrap(void)
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &rhs)
 {
-    const_cast<std::string &>(this->_name) = rhs.getName();
-    const_cast<std::string &>(this->_type) = "DiamondTrap";
-    this->_hitPoints                       = rhs.getHP();
-    this->_energyPoints                    = rhs.getEP();
-    this->_attackDamage                    = rhs.getAD();
+    const_cast<std::string &>(ClapTrap::_name) = rhs.ClapTrap::getName();
+    const_cast<std::string &>(this->_name)     = rhs.getName();
+    const_cast<std::string &>(this->_type)     = "DiamondTrap";
+    this->_hitPoints                           = rhs.getHP();
+    this->_energyPoints                        = rhs.getEP();
+    this->_attackDamage                        = rhs.getAD();
     std::cout << "DiamondTrap " << this->_name
               << " has called the assignment operator!" << std::endl;
     return (*this);
