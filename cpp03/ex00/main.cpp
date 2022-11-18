@@ -19,6 +19,7 @@ int main(void)
     fEdd = edd;
     bob.attack("Edd"); // 9
     edd.takeDamage(0);
+    edd.takeDamage(9);
     zac.beRepaired(32);
     jim.takeDamage(1337);
     jim.attack("Bob");
