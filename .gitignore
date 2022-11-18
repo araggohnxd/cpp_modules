@@ -52,5 +52,8 @@ harlFilter
 fixed
 bsp
 
+# cpp03
+ct
+
 # Custom directories
 .vscode/
