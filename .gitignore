@@ -55,5 +55,8 @@ bsp
 # cpp03
 ct
 
+# cpp04
+animal
+
 # Custom directories
 .vscode/
