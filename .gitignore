@@ -57,6 +57,7 @@ ct
 
 # cpp04
 animal
+interface
 
 # Custom directories
 .vscode/
