@@ -59,5 +59,8 @@ ct
 animal
 interface
 
+# cpp05
+exception
+
 # Custom directories
 .vscode/
