@@ -10,7 +10,7 @@ OBJECT_PATH			:= ./objects
 OBJECT_FILES		:= $(SOURCE_FILES:%.cpp=$(OBJECT_PATH)/%.o)
 
 CC					:= c++
-CFLAGS				:= -Wall -Wextra -std=c++98 -g
+CFLAGS				:= -Wall -Wextra -Werror -std=c++98
 IFLAGS				:= -I./
 REMOVE				:= rm -rf
 
