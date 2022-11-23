@@ -60,7 +60,7 @@ animal
 interface
 
 # cpp05
-exception
+exc
 
 # Custom directories
 .vscode/
