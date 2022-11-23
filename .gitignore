@@ -61,6 +61,7 @@ interface
 
 # cpp05
 exc
+form
 
 # Custom directories
 .vscode/
