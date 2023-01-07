@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:09:38 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/23 20:25:48 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/06 22:40:23 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Form {
                 char const *what(void) const throw();
         };
 
-        class FormAlreadySigned : public std::exception {
+        class FormAlreadySignedException : public std::exception {
                 char const *what(void) const throw();
         };
 

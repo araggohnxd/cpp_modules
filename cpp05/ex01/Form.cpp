@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:09:37 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/23 20:25:51 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/06 22:40:23 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void Form::beSigned(Bureaucrat const &bureaucrat)
     if (bureaucrat.getGrade() > this->_gradeSign)
         throw GradeTooLowException();
     if (this->_signed == true)
-        throw FormAlreadySigned();
+        throw FormAlreadySignedException();
     this->_signed = true;
 }
 
@@ -121,7 +121,7 @@ char const *Form::GradeTooLowException::what(void) const throw()
     return ("Grade in form is too low");
 }
 
-char const *Form::FormAlreadySigned::what(void) const throw()
+char const *Form::FormAlreadySignedException::what(void) const throw()
 {
     return ("This form is already signed");
 }
