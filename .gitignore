@@ -62,6 +62,7 @@ interface
 # cpp05
 exc
 form
+home_shrubbery
 
 # Custom directories
 .vscode/
