@@ -6,12 +6,12 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 12:46:28 by maolivei          #+#    #+#             */
-/*   Updated: 2023/01/06 23:58:02 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/08 00:01:16 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Intern.hpp"
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
@@ -25,7 +25,7 @@ int main(void)
     std::cout << "=== SHRUBBERY CREATION FORM ===" << std::endl;
     std::cout << "===============================" << std::endl;
     {
-        AForm        *scf = someRandomIntern.makeForm("shrubbery creation", "home");
+        AForm *scf = someRandomIntern.makeForm("shrubbery creation", "home");
         Bureaucrat bob("Bob", 1), jon("Jon", 140), tim("Tim", 150);
 
         std::cout << '\n';
@@ -46,7 +46,7 @@ int main(void)
     std::cout << "=== ROBOTOMY REQUEST FORM ===" << std::endl;
     std::cout << "=============================" << std::endl;
     {
-        AForm        *rrf = someRandomIntern.makeForm("robotomy request", "Minion");
+        AForm *rrf = someRandomIntern.makeForm("robotomy request", "Minion");
         Bureaucrat pip("Pip", 1), ted("Ted", 60), axl("Axl", 150);
 
         std::cout << '\n';
@@ -71,7 +71,8 @@ int main(void)
     std::cout << "=== PRESIDENTIAL PARDON FORM ===" << std::endl;
     std::cout << "================================" << std::endl;
     {
-        AForm        *ppf = someRandomIntern.makeForm("presidential pardon", "Sirius Black");
+        AForm *ppf
+            = someRandomIntern.makeForm("presidential pardon", "Sirius Black");
         Bureaucrat tyr("Tyr", 1), edd("Edd", 20), dre("Dre", 150);
 
         std::cout << '\n';
@@ -88,10 +89,14 @@ int main(void)
         delete ppf;
         std::cout << '\n';
     }
-    std::cout << "\n=====================" << std::endl;
+    std::cout << "\n======================" << std::endl;
     std::cout << "=== FORM NOT FOUND ===" << std::endl;
     std::cout << "======================" << std::endl;
-    someRandomIntern.makeForm("this form doesn't exist", "right?");
+    try {
+        someRandomIntern.makeForm("this form doesn't exist", "right?");
+    } catch (std::exception const &e) {
+        std::cerr << "Caught exception: " << e.what() << '\n';
+    }
     std::cout << '\n';
     return (0);
 }

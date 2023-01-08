@@ -7,6 +7,7 @@ HEADER_FILES		+= Intern.hpp
 SOURCE_PATH			:= ./
 SOURCE_FILES		:= main.cpp
 SOURCE_FILES		+= Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
+SOURCE_FILES		+= RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 SOURCE_FILES		+= Intern.cpp
 
 OBJECT_PATH			:= ./objects
