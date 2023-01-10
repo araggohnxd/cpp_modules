@@ -64,5 +64,8 @@ exc
 form
 home_shrubbery
 
+# cpp06
+convert
+
 # Custom directories
 .vscode/
