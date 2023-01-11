@@ -69,6 +69,7 @@ convert
 
 # cpp06
 whatever
+iter
 
 # Custom directories
 .vscode/
