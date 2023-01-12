@@ -74,6 +74,7 @@ array
 
 # cpp08
 easyfind
+span
 
 # Custom directories
 .vscode/
