@@ -72,5 +72,8 @@ whatever
 iter
 array
 
+# cpp08
+easyfind
+
 # Custom directories
 .vscode/
