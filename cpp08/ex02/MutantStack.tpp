@@ -6,9 +6,12 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 21:04:52 by maolivei          #+#    #+#             */
-/*   Updated: 2023/01/12 23:50:45 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:33:11 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef MUTANT_STACK_TPP
+#define MUTANT_STACK_TPP
 
 #include "MutantStack.hpp"
 
@@ -98,3 +101,5 @@ typename MutantStack<T>::const_reverse_iterator MutantStack<T>::rend(void) const
 {
     return (this->c.rend());
 }
+
+#endif /* MUTANT_STACK_TPP */

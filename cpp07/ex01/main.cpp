@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 18:31:02 by maolivei          #+#    #+#             */
-/*   Updated: 2023/01/11 18:58:10 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:24:39 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 template <typename T>
-void print(T const &x)
+void print(T &x)
 {
     std::cout << x << ' ';
 }

@@ -6,9 +6,12 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:14:40 by maolivei          #+#    #+#             */
-/*   Updated: 2023/01/11 23:03:53 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:30:16 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ARRAY_TPP
+#define ARRAY_TPP
 
 #include "Array.hpp"
 
@@ -77,7 +80,7 @@ template <typename T>
 T &Array<T>::operator[](size_t i)
 {
     if (i >= this->_size)
-        throw std::out_of_range("Exception: Index out of range");
+        throw std::out_of_range("Index out of range");
     return (this->_array[i]);
 }
 
@@ -85,7 +88,7 @@ template <typename T>
 T const &Array<T>::operator[](size_t i) const
 {
     if (i >= this->_size)
-        throw std::out_of_range("Exception: Index out of range");
+        throw std::out_of_range("Index out of range");
     return (this->_array[i]);
 }
 
@@ -98,3 +101,5 @@ size_t Array<T>::size(void) const
 {
     return (this->_size);
 }
+
+#endif /* ARRAY_TPP */

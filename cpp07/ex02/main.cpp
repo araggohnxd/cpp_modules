@@ -6,12 +6,11 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 18:59:55 by maolivei          #+#    #+#             */
-/*   Updated: 2023/01/11 23:03:55 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:32:09 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
-#include "Array.tpp"
 #include <cstdlib>
 #include <iostream>
 
@@ -51,12 +50,13 @@ int main(int, char **)
     try {
         numbers[-2] = 0;
     } catch (std::exception const &e) {
-        std::cerr << e.what() << '\n';
+        std::cerr << "Couldn't access index -2: " << e.what() << '\n';
     }
     try {
         numbers[MAX_VAL] = 0;
     } catch (std::exception const &e) {
-        std::cerr << e.what() << '\n';
+        std::cerr << "Couldn't access index " << MAX_VAL << ": " << e.what()
+                  << '\n';
     }
 
     for (int i = 0; i < MAX_VAL; i++) {

@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:00:03 by maolivei          #+#    #+#             */
-/*   Updated: 2023/01/11 23:03:51 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:27:02 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ class Array {
         T     *_array;
         size_t _size;
 };
+
+#include "Array.tpp"
 
 #endif /* ARRAY_HPP */
