@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:14:39 by maolivei          #+#    #+#             */
-/*   Updated: 2023/01/12 17:57:44 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/15 22:16:17 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,11 @@ std::ostream &operator<<(std::ostream &o, Span const &i)
     std::vector<int>::iterator it;
     std::vector<int>           tmp;
 
-    std::cout << "Span maximum capacity: " << i.getMax() << '\n';
+    o << "Span maximum capacity: " << i.getMax() << '\n';
     tmp = i.getSpan();
-    std::cout << "Span items:";
+    o << "Span items:";
     for (it = tmp.begin(); it < tmp.end(); it++)
-        std::cout << ' ' << *it;
+        o << ' ' << *it;
     return (o);
 }
 
