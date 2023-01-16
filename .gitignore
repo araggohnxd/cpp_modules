@@ -33,9 +33,9 @@
 
 # Custom files
 */.gitignore
+.clang-format
 
 # cpp00
-.clang-format
 megaphone
 phonebook
 19920104_091532.log
