@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 20:33:12 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/17 13:02:09 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/15 22:09:06 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ Fixed::~Fixed() { std::cout << "Destructor called" << std::endl; }
 
 Fixed &Fixed::operator=(Fixed const &rhs)
 {
+    this->setRawBits(rhs._rawBits);
     std::cout << "Copy assignment operator called" << std::endl;
-    this->setRawBits(rhs.getRawBits());
     return (*this);
 }
 
