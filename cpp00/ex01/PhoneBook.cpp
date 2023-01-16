@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:05:14 by maolivei          #+#    #+#             */
-/*   Updated: 2022/12/20 15:28:44 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/16 14:33:35 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,8 @@ void PhoneBook::prompt_search(void)
         if (std::cin.eof())
             return;
         this->_skip_whitespaces(str_index);
+        if (str_index.empty())
+            continue;
         if (this->_check_contact_index(str_index) == 0) {
             int_index = atoi(str_index.c_str());
             if (int_index > 0 && int_index <= (int)this->_total_contacts)
@@ -121,7 +123,7 @@ void PhoneBook::prompt_search(void)
 void PhoneBook::_skip_whitespaces(std::string &name)
 {
     for (std::string::iterator it = name.begin();
-         it < name.end(), std::isspace(*it);
+         it != name.end() && std::isspace(*it);
          ++it) {
         name.erase(it);
         it = name.begin() - 1;

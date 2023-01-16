@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 20:56:40 by maolivei          #+#    #+#             */
-/*   Updated: 2022/12/20 15:28:40 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/16 14:30:00 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,16 @@ int main(void)
     std::string input;
     std::string str;
 
-    std::cout << "Welcome to your phonebook! Here, you can:" << std::endl;
-    std::cout << "ADD contacts, SEARCH for a contact, or EXIT." << std::endl;
-    std::cout << "Pick an option!\n" << std::endl;
+    std::cout << "Welcome to your phonebook! Here, you can:\n"
+              << "ADD contacts, SEARCH for a contact, or EXIT.\n"
+              << "Pick an option!\n"
+              << std::endl;
     while (true) {
         std::getline(std::cin, input);
         if (std::cin.eof() || input == "EXIT")
             break;
+        else if (input.empty())
+            continue;
         else if (input == "ADD")
             phonebook.prompt_add();
         else if (input == "SEARCH")
