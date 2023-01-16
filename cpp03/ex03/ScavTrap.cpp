@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 11:57:17 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/18 13:17:31 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:20:12 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap(void) : ClapTrap()
               << " has been created via default constructor!" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &src) : ClapTrap(src)
+ScavTrap::ScavTrap(ScavTrap const &src) : ClapTrap(src)
 {
     const_cast<std::string &>(this->_type) = "ScavTrap";
     this->_hitPoints                       = src.getHP();
@@ -82,4 +82,14 @@ void ScavTrap::guardGate(void)
         return;
     std::cout << this->_type << " " << this->_name
               << " is now in gatekeeper mode!" << std::endl;
+}
+
+void ScavTrap::attack(std::string const &target)
+{
+    if (!tryAct())
+        return;
+    std::cout << this->_type << " " << this->_name << " strikes " << target
+              << ", dealing " << this->_attackDamage << " point"
+              << (this->_attackDamage != 1 ? "s" : "") << " of damage!"
+              << std::endl;
 }

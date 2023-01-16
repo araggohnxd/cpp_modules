@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 21:24:04 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/18 16:11:50 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:21:20 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main(void)
         pip.whoAmI();
     }
     std::cout << std::endl;
+    zac.attack("Max");
     tim.attack("Edd");
     tyr.takeDamage(tim.getAD());
     tyr.guardGate();

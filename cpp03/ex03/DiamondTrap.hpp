@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 11:57:18 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/18 16:05:10 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:18:31 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class DiamondTrap : public ScavTrap, public FragTrap {
         std::string getName(void) const;
 
         void whoAmI(void) const;
+        void attack(std::string const &target);
 
     private:
         std::string const _name;

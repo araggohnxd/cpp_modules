@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 11:57:18 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/18 13:17:32 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:25:48 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class ScavTrap : public ClapTrap {
         ScavTrap &operator=(ScavTrap const &rhs);
 
         void guardGate(void);
+        void attack(std::string const &target);
 };
 
 #endif /* SCAVTRAP_H */

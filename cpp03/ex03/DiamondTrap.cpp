@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 11:57:17 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/18 16:08:41 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:18:06 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ DiamondTrap::DiamondTrap(void) :
               << " has been created via default constructor!" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &src) :
+DiamondTrap::DiamondTrap(DiamondTrap const &src) :
     ClapTrap(src),
     ScavTrap(src),
     FragTrap(src),
@@ -94,6 +94,11 @@ void DiamondTrap::whoAmI(void) const
     std::cout << "I am " << this->_type << " " << this->_name
               << ", and my ClapTrap name is " << ClapTrap::_name << "!"
               << std::endl;
+}
+
+void DiamondTrap::attack(std::string const &target)
+{
+    ScavTrap::attack(target);
 }
 
 /*

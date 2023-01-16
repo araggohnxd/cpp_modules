@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 11:57:17 by maolivei          #+#    #+#             */
-/*   Updated: 2022/11/18 13:17:31 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:26:07 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,14 @@ void ScavTrap::guardGate(void)
         return;
     std::cout << this->_type << " " << this->_name
               << " is now in gatekeeper mode!" << std::endl;
+}
+
+void ScavTrap::attack(std::string const &target)
+{
+    if (!tryAct())
+        return;
+    std::cout << this->_type << " " << this->_name << " strikes " << target
+              << ", dealing " << this->_attackDamage << " point"
+              << (this->_attackDamage != 1 ? "s" : "") << " of damage!"
+              << std::endl;
 }
