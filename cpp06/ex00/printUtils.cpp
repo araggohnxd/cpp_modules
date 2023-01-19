@@ -34,7 +34,7 @@ void handleWhitespaces(char &c)
 void printError(std::string &str)
 {
     std::cerr << "The input '" << str
-              << "' not a char, or a integer, nor a float, "
+              << "' is not a char, or a integer, nor a float, "
                  "neither a double."
               << std::endl;
 }
