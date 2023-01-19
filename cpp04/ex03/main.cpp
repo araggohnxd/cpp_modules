@@ -91,8 +91,8 @@ int main(void)
     std::cout << std::endl;
 
     std::cout << "=== TRY TO USE INVALID SLOTS IN 'BOB' ===" << std::endl;
-    me->use(3, *bob);
-    me->use(4, *bob);
+    bob->use(3, *me);
+    bob->use(4, *me);
     std::cout << std::endl;
 
     std::cout << "=== CHECK CHARACTER CTOR COPY ===" << std::endl;
