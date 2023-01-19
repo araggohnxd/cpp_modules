@@ -6,7 +6,7 @@
 /*   By: maolivei <maolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 23:03:33 by maolivei          #+#    #+#             */
-/*   Updated: 2023/01/10 23:30:40 by maolivei         ###   ########.fr       */
+/*   Updated: 2023/01/19 20:07:09 by maolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,15 @@ void identify(Base *p)
 void identify(Base &p)
 {
     try {
-        dynamic_cast<A &>(p);
+        A a = dynamic_cast<A &>(p);
         std::cout << "This reference derives from class A" << std::endl;
     } catch (std::exception const &ea) {
         try {
-            dynamic_cast<B &>(p);
+            B b = dynamic_cast<B &>(p);
             std::cout << "This reference derives from class B" << std::endl;
         } catch (std::exception const &eb) {
             try {
-                dynamic_cast<C &>(p);
+                C c = dynamic_cast<C &>(p);
                 std::cout << "This reference derives from class C" << std::endl;
             } catch (std::exception const &ec) {
                 std::cerr << "No match for this reference" << std::endl;
@@ -75,9 +75,9 @@ int main(void)
     delete ptr;
 
     Base *nul = NULL;
-    Base &nil = *nul;
+    // Base &nil = *nul;
     identify(nul);
-    identify(nil);
+    // identify(nil);
 
     return (0);
 }
